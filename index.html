@@ -5,19 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>UMS_Mena</title>
 </head>
 <body>
     <nav>
-        <img src="Images/arms_of_Egypt_(Official).svg" style="width:25px">
-        <ul>
-            <li>E-Mail: Ums.Support@Cis.Asu.Edu.Eg</li>
-            <li>Phone: +2-26831474</li>
-            <li><img src="Images/eg.png" style="width: 20px;"> عربي</li>
-            <li><img src="Images/gb.png" style="width: 20px;"> English</li>
+        <img id="armsOfEG" src="Images/arms_of_Egypt_(Official).svg" style="width:20px">
+        <ul id="nav-main">
+            <li><span class="seperator">|</span> E-Mail: <span class="grey">Ums.Support@Cis.Asu.Edu.Eg</span></li>
+            <li><span class="seperator">|</span> Phone: <span class="grey">+2-26831474</span></li>
+            <li class="grey"><span class="seperator">|</span> <img src="Images/eg.png" style="width: 18px;"> عربي</li>
+            <li class="grey"><span class="seperator">|</span> <img src="Images/gb.png" style="width: 18px;"> English</li>
+        </ul>
+
+        <ul id="nav-icons">
+            <li><a href=""><i class="fab fa-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-youtube"></i></a></li>
+            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href=""><i class="fab fa-connectdevelop"></i></a></li>
         </ul>
 
     </nav>
+
+
+    <section class="home">
+        <div class="home-header">
+            <img src="Images/logoums.png" alt="">
+            <p>Electronic Management System of Ain Shams University</p>
+        </div>
+
+
+        <div class="slider">
+
+
+
+            <div class="slider-card card-active" id="card-1">
+                <img src="Images/background1.jpeg" alt="">
+
+                <div class="slider-card-items">
+                    <h1>Ain Shams University electronic systems</h1>
+                    <p>Which manages the educational and administrative process within the university</p>
+
+                    <div class="card-buttons">
+                        <button class="blue">Discover</button>
+                        <button class="blue">Your Opinion Matters</button>
+                    </div>
+                   
+                </div>
+                
+
+            </div>
+
+
+
+
+            <div class="slider-card" id="card-2">
+                <img src="Images/background2.jpeg" alt="">
+
+                <div class="slider-card-items">
+                    <h1>Book Your Course Now</h1>
+                    <p>You can book courses on Coursera or apply to Postgraduate Studies online using our system</p>
+
+                    <div class="card-buttons">
+                        <button>Apply for PG Studies</button>
+                        <button>Book Your Course</button>
+                    </div>
+                   
+                </div>
+                
+
+            </div>
+
+
+
+
+
+            <div class="slider-card" id="card-3">
+                <img src="Images/background3.jpeg" alt="">
+
+                <div class="slider-card-items">
+                    <h1>What Are Services That Are Provided On Our System?</h1>
+                    <p>You can know your results, submit petitions, pay expenses, register for materials, file complaints</p>
+
+                    <div class="card-buttons">
+                        <button>Login</button>
+                    </div>
+                   
+                </div>
+                
+
+            </div>
+            
+            <i class="fas fa-angle-left arrow arrow-left" onClick="prevCard()"></i>
+            <i class="fas fa-angle-right arrow arrow-right" onclick="nextCard()" ></i>
+            
+            <div class="control-dots">
+                <i class="fas fa-circle dot-active" id="dot-0"></i>
+                <i class="fas fa-circle" id="dot-1"></i>
+                <i class="fas fa-circle" id="dot-2"></i>
+            </div>
+
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>

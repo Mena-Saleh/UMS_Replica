@@ -1,19 +1,310 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
+
+
+/* Navigation */
+
 nav{
     width: 100%;
-    height: 50px;
+    min-height: 55px;
+    height: auto;
     background-color: #1C335F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    
 }
 nav ul{
     display: inline;
     color: #FFF;
-    font-size: 16px;
+    font-size: 13px;
+    
 }
 
 nav ul li{
     display: inline;
     list-style: none;
 }
+
+.grey{
+    color: #CCC;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.grey:hover{
+    transition: 0.5s;
+    color: #62ADF5;
+}
+
+.seperator{
+    margin: 0px 10px;
+    color: #777;
+    font-size: 12px;
+}
+
+#nav-main{
+    margin-right: 20%;
+}
+
+#nav-icons a{
+    margin: 0 7px;
+    font-size: 13px;
+    color: #FFF;
+    transition: 0.5s;
+}
+
+#nav-icons a:hover{
+
+    color: #62ADF5;
+    transition: 0.5s;
+}
+
+
+
+
+
+/* Home section */
+
+
+.home-header{
+    min-height: 100px;
+    height: auto;
+    display: flex;
+    align-items: center ;
+    justify-content: flex-start;
+    margin: 10px 10%;
+    color: rgb(97, 128, 153);
+    font-size: 18px;
+}
+
+.home-header p{
+    margin-top: 30px;
+}
+
+.home-header img{
+    width: 200px;
+    margin-right: 10%;
+}
+
+
+.slider{
+    width: 100%;
+    height: 600px;
+}
+
+.slider img{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.slider-card{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: -1;
+    height: 600px;
+}
+.slider-card-items{
+    position: relative;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10%;
+    margin-top: 150px;
+}
+
+.slider-card h1{
+    font-size: 44px;
+    width: 60%;
+}
+
+.slider-card p{
+    font-size: 16px;
+    width: 80%;
+
+}
+
+.card-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.slider-card button{
+    width: auto;
+    padding: 0px 20px;
+    height: 50px;
+    border-radius: 30px;    
+    color: white;
+    border: 1px solid #F3AF4E;
+    background-color: #F3AF4E;
+    margin-right: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider-card button:hover{
+   color: #F3AF4E;
+   background-color: transparent;
+   transition: 0.3s;
+   box-shadow: 0px 7px 5px 5px #F3AF4E;
+}
+
+button.blue{
+    background-color: #6FADFA;
+    border: 1px solid #6FADFA;
+}
+
+button.blue:hover{
+    background-color: white;
+    color: #6FADFA;
+    box-shadow: 0px 7px 5px 5px #6FADFA;
+}
+
+
+
+
+.arrow{
+    position: relative;
+    color: white;
+    z-index: 3;
+    font-size: 25px;
+    color: #777;
+    top: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.arrow:hover{
+    transform: scale(120%);
+    transition: 0.5s;
+    color: #FFF;
+}
+
+.arrow-right{
+    margin-left: 88%;
+}
+
+.arrow-left{
+    margin-left: 5%;
+}
+
+
+.control-dots{
+    position: relative;
+    transition: 0.5s;
+    color: #777;
+    font-size: 10px;
+    z-index: 3;
+    top: 90%;
+    margin: 0 auto;
+    display: flex;
+    width: 50px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.control-dots i{
+    transition: 0.5s;
+}
+
+.control-dots i:hover{
+    transform: 0.5s;
+    transform: scale(120%);
+    color: #6FADFA;
+}
+
+.dot-active{
+    color: #FFF;
+    transition: 0.5s;
+}
+
+.card-active{
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+/* Responsiveness */
+
+@media screen and (max-width: 1000px) {
+    #nav-icons a{
+        display: none;
+    }
+    #nav-main{
+        margin-right: 0;
+    }
+    #armsOfEG{
+       top: 10px;
+       left: 20px;
+       margin: 0px;
+       position: relative;
+    }
+    nav{
+        display: block;
+    }
+    nav li{
+        display: block;
+    }
+    nav .seperator{
+        margin: 0;
+    }
+
+    .home-header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .slider-card-items{
+        margin-top: 100px;
+    }
+
+    .slider-card h1{
+        font-size: 36px;
+        width: 100%;
+    }
+    
+    .slider-card p{
+        font-size: 12px;
+        width: 100%;
+    }
+
+
+    .slider-card button{
+        height: 40px;
+        font-size: 14px;
+    }
+
+
+    .arrow-right{
+        margin-left: 70%;
+    }
+    
+    .arrow-left{
+        margin-left: 10%;
+    }
+
+}
+
+
