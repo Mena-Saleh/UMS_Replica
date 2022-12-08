@@ -241,11 +241,90 @@ button.blue:hover{
 
 
 
+/* Grid Section */
+
+
+.grid{
+    width: 80%;
+    margin: 100px auto;
+    height: 400px;
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-around;
+}
+
+.grid-card{
+    width: 200px;
+    height: 210px;
+    border-radius: 20px;
+    background-color: #1C335F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.3s;
+}
+
+.grid-card:hover{
+    transition: 0.3s;
+    opacity: 0.8;
+    transform: translateY(-20px);
+}
+
+
+.grid-card svg{
+
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    background-color: #6FADFA;
+    color: #FFF;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+.grid-card p{
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+    width: 60%;
+}
+
+svg.yellow{
+    background-color: #F3AF4E;
+}
+
+svg.red{
+    background-color: #FA6640;
+}
 
 
 
 
 /* Responsiveness */
+
+@media screen and (max-width: 1400px){
+
+    .grid{
+        grid-template-columns: auto auto auto auto;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1200px){
+
+    .grid{
+        grid-template-columns: auto auto auto;
+    }
+
+}
+
+
+
 
 @media screen and (max-width: 1000px) {
     #nav-icons a{
@@ -305,6 +384,25 @@ button.blue:hover{
         margin-left: 10%;
     }
 
+
+    .grid{
+        grid-template-columns: auto auto;
+    }
+
+
 }
 
 
+
+@media screen and (max-width: 700px) {
+
+    .grid{
+        grid-template-columns: auto;
+    }
+
+    .grid-card{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+}
