@@ -1,5 +1,11 @@
+//Variables:
+
 dots = document.querySelectorAll(".control-dots i");
 cards = document.querySelectorAll(".slider-card")
+
+
+
+//Display next card:
 
 const nextCard = () =>{
 
@@ -23,6 +29,7 @@ cards[i].classList.remove("card-active")
 }
 
 
+//Display previous card:
 
 const prevCard = () =>{
 
@@ -46,6 +53,7 @@ const prevCard = () =>{
     }
 
 
+//Manipulate cards using dots:
 
     const activateCard = (event) =>{
 
@@ -67,3 +75,5 @@ const prevCard = () =>{
     for(let i = 0; i < dots.length; i ++){
         dots[i].addEventListener("click", activateCard);
     }
+
+
