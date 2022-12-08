@@ -6,6 +6,9 @@ cards = document.querySelectorAll(".slider-card");
 tabs = document.querySelectorAll(".tab-headers button");
 tabParagraphs = document.querySelectorAll(".tab-content p");
 
+circles = document.querySelectorAll(".circle-progress")
+stats = document.querySelector(".stats")
+
 //Display next card:
 
 const nextCard = () => {
@@ -75,3 +78,6 @@ const activateTab = (event) => {
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener("click", activateTab);
 }
+
+
+

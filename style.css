@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #F7F7F7;
 }
 
 
@@ -252,11 +251,16 @@ button.blue:hover{
     height: auto;
     display: grid;
     column-gap: 20px;
-    row-gap: 20px;
+    row-gap: 40px;
     grid-template-columns: auto auto auto auto auto;
     justify-content: space-around;
 
     
+}
+
+
+.grid a{
+    text-decoration: none;
 }
 
 .grid-card{
@@ -441,6 +445,19 @@ input.txt-entry{
 
 }
 
+.tab-headers button:hover{
+
+    background-color: #AAA;
+    color: #FFF;
+    transition: 0.3s;
+
+}
+
+.tab-headers button:hover svg{
+    background-color: #AAA;
+    transition: 0.3s;
+}
+
 
 .tab-headers button:focus {
     background-color: #1C335F;
@@ -530,12 +547,158 @@ p.active-tab{
     box-shadow: 0px 9px 0px 0px #F3AF4E;
 }
 
+
+.tab-container{
+    background-color: #F7F7F7;
+    padding: 50px 0;
+}
+
+
+
+
+
+
+
+
+/* Services Section */
+
+
+.services{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.services-text{
+
+    margin-left: 100px;
+    padding: 20px;
+    
+}
+.services-text h1{
+    color: #9CB6D4;
+    font-size: 20px;
+    margin: 30px;
+    font-weight: 100;
+    
+}
+
+.services-text li{
+    text-align: left;
+    list-style: none; 
+    margin: 7px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.services-text a{
+    text-decoration: none;
+    color: #677294;
+    transition: 0.3s;
+}
+
+.services-text a:hover{
+    text-decoration: underline;
+    color: #FA6640;
+    transition: 0.3s;
+}
+
+
+
+.services-image{
+    height: 480px;
+    width: 370px;
+    margin: auto 0;
+    background: rgb(149,188,219);
+    background: linear-gradient(238deg, rgba(149,188,219,1) 0%, rgba(193,230,241,1) 100%);
+}
+
+.services img{
+    box-shadow: 2px 2px 5px 1px #DDD;
+    width: 350px;
+    margin: 65px 0;
+    position: relative;
+    left: 60px;
+
+}
+
+
+
+
+
+
+/* Stats and Circular Progress */
+
+
+.stats{
+
+    background-color: #1C335F;
+    min-height: 350px;
+    height: auto;
+    width: 100%;
+    margin: 100px 0;
+    padding: 80px 0; 
+    display: grid;
+    column-gap: 90px;
+    row-gap: 40px;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+}
+
+.stat-entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-entry p{
+    color: #FFF;
+    font-size: 20px;
+}
+
+.circle-progress{
+    background: conic-gradient( rgb(170, 111, 250) 240deg, rgb(255,255,255) 0deg);
+    width: 200px; 
+    height: 200px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-progress p{
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 600;
+    background-color: #1C335F;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
 /* Responsiveness */
 
 @media screen and (max-width: 1400px){
 
     .grid{
         grid-template-columns: auto auto auto auto;
+    }
+
+
+    .stats{
+
+        grid-template-columns: auto auto auto;
     }
 
 }
@@ -578,6 +741,30 @@ p.active-tab{
     .tab-content button{
         font-size: 18px;
     }
+
+
+    .services{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .services-text{
+
+        margin: 0px;
+        padding: 20px;
+        
+    }
+
+    .stats{
+
+        grid-template-columns: auto auto;
+    }
+
+
 }
 
 
@@ -659,8 +846,7 @@ p.active-tab{
         width: 50%;
     }
     
-
-
+   
 }
 
 
@@ -674,6 +860,11 @@ p.active-tab{
     .grid-card{
         width: 80%;
         margin-left: 10%;
+    }
+
+    .stats{
+
+        grid-template-columns: auto;
     }
 
 }
