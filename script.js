@@ -6,8 +6,6 @@ cards = document.querySelectorAll(".slider-card");
 tabs = document.querySelectorAll(".tab-headers button");
 tabParagraphs = document.querySelectorAll(".tab-content p");
 
-circles = document.querySelectorAll(".circle-progress")
-stats = document.querySelector(".stats")
 
 //Display next card:
 
